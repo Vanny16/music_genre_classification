@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+   <title>Music Genre Classification Using Ensemble Learning</title>
+   <meta name="description" content="">
+   <meta name="Vanny" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+   <!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+   <link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+   <link rel="stylesheet" href="css/draganddrop.css">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+   <!-- Script
+   ================================================== -->
+   <script src="js/modernizr.js"></script>
+
+   <!-- Icon Page
+	================================================== -->
+   <link rel="shortcut icon" href="images/University_of_Mindanao_Logo.png">
+
+   <style>
+      .color-box {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: auto;
+         /* Adjust the width as needed */
+         margin: 20px auto;
+      }
+
+      .color-option {
+         cursor: pointer;
+         padding: 15px 30px;
+         /* Adjust padding as needed */
+         margin: 0 10px;
+         /* Adjust margin as needed */
+         border: 2px solid #ccc;
+         border-radius: 10px;
+         background-color: #fff;
+         /* Default background color */
+         font-weight: bold;
+         /* Make text bold */
+         font-size: 16px;
+         /* Increase font size */
+         color: black;
+         /* Set default text color */
+      }
+
+      .color-option.active {
+         background-color: #f0f0f0;
+         /* Active background color */
+         color: white;
+         /* Set text color to white when active */
+      }
+   </style>
+
+
+
+
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+         <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+            <li><a class="smoothscroll" href="#about">About</a></li>
+            <li><a class="smoothscroll" href="#genres">Genres</a></li>
+            <li><a class="smoothscroll" href="#simulator">Simulator</a></li>
+            <li><a class="smoothscroll" href="#contact">Contact</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+      <div class="row banner">
+         <div class="banner-text">
+            <h1 class="responsive-headline">Music Genre Classification Using Ensemble Learning</h1>
+            <h3>A Study of three <span>Computer Science</span> student of the <span>University of Midnanao</span> learn
+               more <a class="smoothscroll" href="#about">about our study</a>.<h3>
+         </div>
+      </div>
+
+      <p class="scrolldown">
+         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+      </p>
+
+   </header> <!-- Header End -->
+
+
+   <!-- About Section
+   ================================================== -->
+   <section id="about">
+
+      <div class="row">
+
+         <div class="three columns">
+
+            <img class="profile-pic" src="images/University_of_Mindanao_Logo.png" alt="" />
+
+         </div>
+
+         <div class="nine columns main-col">
+
+            <h2>About</h2>
+
+            <p style="text-align: justify">In recent years, there has been a notable and substantial increase in the
+               widespread adoption and
+               popularity of streaming music services. This has drawn out a range of reactions, including both optimism
+               and apprehension, regarding their effects on revenue generated from recorded music. As a result, there is
+               an increasing need for efficient and accurate methods to classify music into genres. The rapid evolution
+               of advanced multimedia technologies has made abundant musical resources accessible online, generating a
+               continuous interest in categorizing diverse music genres.
+            </p>
+
+            <p style="text-align: justify">This research is dedicated to develop more accurate and robust classification of
+               music genres. With the continuous growth of digital music libraries and the pressing demand for
+               streamlined genre labeling, this study aims to substantially enhance the accuracy and efficiency of music
+               genre identification using Ensemble Learning.
+            </p>
+
+            <p style="text-align: justify">Furthermore, Advocates will impose limitations on permissible music genres,
+               stipulating that only Blues, Classical, Country, Disco, Hip-hop, Jazz, Metal, Pop, Reggae, and Rock are
+               permitted. Any other genres (e.g., datasets) will be excluded to minimize problems when interpreting the
+               results. In terms of datasets, Regarding datasets, the data will be sourced from GTZAN, a widely
+               recognized dataset utilized in music genre classification research. This dataset includes ten genres,
+               each with 100 audio files and another 900 audio files that are not related to GTZAN, which are from
+               different songs. Every audio file is 30 seconds long. Ultimately, the suggested model is anticipated to
+               yield a more precise, quicker, and more effective result than the study that solely used convolutional
+               neural networks. The study exclusively utilizes WAV file format due to its compatibility with the
+               selected machine learning algorithms. Other formats, such as MP3, are not currently supported.
+            </p>
+
+            <div class="row">
+               <div class="columns">
+                  <p>
+                     <a href="https://docs.google.com/document/d/1AVUsBdSZczHwfVyiR8Sjdp2-xha7Zwyw6kOZ2uoGrf8/edit?usp=sharing"
+                        target="_blank" class="button"><i class="fa fa-file"></i>&nbsp;View Paper</a>
+                  </p>
+               </div>
+
+               <div class="columns">
+                  <p>
+                     <a href="https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification"
+                        target="_blank" class="button"><i class="fa fa-music"></i>&nbsp;View Dataset</a>
+                  </p>
+               </div>
+            </div> <!-- end row -->
+
+         </div> <!-- end .main-col -->
+
+      </div>
+
+   </section> <!-- About Section End-->
+
+   <!-- Genres Section
+   ================================================== -->
+   <section id="genres">
+
+      <div class="row">
+
+         <div class="twelve columns collapsed">
+
+            <h1>The scope of our research includes ten genres, which are:</h1>
+
+            <!-- genres-wrapper -->
+            <div id="genres-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
+
+               <div class="columns genres-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-01" title="">
+                        <img alt="" src="images/genres/blues.jpg">
+                        <div class="overlay">
+                           <div class="genres-item-meta">
+                              <h5>Blues</h5>
+                              <p>Music</p>
+                           </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+               </div> <!-- item end -->
+
+               <div class="columns genres-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-02" title="">
+                        <img alt="" src="images/genres/classical.jpg">
+                        <div class="overlay">
+                           <div class="genres-item-meta">
+                              <h5>Classical</h5>
+                              <p>Music</p>
+                           </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+               </div> <!-- item end -->
+
+               <div class="columns genres-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-03" title="">
+                        <img alt="" src="images/genres/country.jpg">
+                        <div class="overlay">
+                           <div class="genres-item-meta">
+                              <h5>Country</h5>
+                              <p>Music</p>
+                           </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+               </div> <!-- item end -->
+
+               <div class="columns genres-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-04" title="">
+                        <img alt="" src="images/genres/disco.jpg">
+                        <div class="overlay">
+                           <div class="genres-item-meta">
+                              <h5>Disco</h5>
+                              <p>Music</p>
+                           </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+               </div> <!-- item end -->
+
+               <div class="columns genres-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-05" title="">
+                        <img alt="" src="images/genres/hip-hop.jpg">
+                        <div class="overlay">
+                           <div class="genres-item-meta">
+                              <h5>Hip-hop</h5>
+                              <p>Music</p>
+                           </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+               </div> <!-- item end -->
+
+               <div class="columns genres-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-06" title="">
+                        <img alt="" src="images/genres/jazz.jpg">
+                        <div class="overlay">
+                           <div class="genres-item-meta">
+                              <h5>Jazz</h5>
+                              <p>Music</p>
+                           </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+               </div> <!-- item end -->
+
+               <div class="columns genres-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-07" title="">
+                        <img alt="" src="images/genres/metal.jpg">
+                        <div class="overlay">
+                           <div class="genres-item-meta">
+                              <h5>Metal</h5>
+                              <p>Music</p>
+                           </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+               </div> <!-- item end -->
+
+               <div class="columns genres-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-08" title="">
+                        <img alt="" src="images/genres/pop.jpg">
+                        <div class="overlay">
+                           <div class="genres-item-meta">
+                              <h5>Pop</h5>
+                              <p>Music</p>
+                           </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+               </div> <!-- item end -->
+
+               <div class="columns genres-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-09" title="">
+                        <img alt="" src="images/genres/reggae.jpg">
+                        <div class="overlay">
+                           <div class="genres-item-meta">
+                              <h5>Reggae</h5>
+                              <p>Music</p>
+                           </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+               </div> <!-- item end -->
+
+               <div class="columns genres-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-10" title="">
+                        <img alt="" src="images/genres/rock.jpg">
+                        <div class="overlay">
+                           <div class="genres-item-meta">
+                              <h5>Rock</h5>
+                              <p>Music</p>
+                           </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+               </div> <!-- item end -->
+
+            </div> <!-- genres-wrapper end -->
+
+         </div> <!-- twelve columns end -->
+
+
+         <!-- Modal Popup
+	      --------------------------------------------------------------- -->
+
+         <div id="modal-01" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/genres/modals/m-blues.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Blues</h4>
+               <p>The American Deep South is where the blues, as a musical genre and form, first emerged in the 1860s.
+                  Spirituals, labor songs, field hollers, chants, yells, and straightforward narrative ballads with
+                  rhymes from African-American culture were all absorbed into the blues.</p>
+               <span class="categories"><i class="fa fa-music"></i>Music Genre</span>
+            </div>
+
+            <div class="link-box">
+               <a href="https://en.wikipedia.org/wiki/Blues" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-01 End -->
+
+         <div id="modal-02" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/genres/modals/m-classical.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Classical</h4>
+               <p>Western art music, which is often distinguished from Western folk music or popular music traditions,
+                  is referred to as classical music. As the word "classical music" can also refer to non-Western art
+                  musics, it is occasionally distinguished as Western classical music.</p>
+               <span class="categories"><i class="fa fa-music"></i>Music Genre</span>
+            </div>
+
+            <div class="link-box">
+               <a href="https://en.wikipedia.org/wiki/Classical_music" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-02 End -->
+
+         <div id="modal-03" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/genres/modals/m-country.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Country</h4>
+               <p>The music genre known as "country," often known as "country and western," has its roots in the
+                  American South and Southwest. Country music, which originated in the 1920s, typically depicts
+                  working-class and blue-collar American life.</p>
+               <span class="categories"><i class="fa fa-music"></i>Music Genre</span>
+            </div>
+
+            <div class="link-box">
+               <a href="https://en.wikipedia.org/wiki/Country_music" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-03 End -->
+
+         <div id="modal-04" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/genres/modals/m-disco.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Disco</h4>
+               <p>Disco is a dance music genre and a subculture that originated in the metropolitan nightlife of the
+                  United States in the 1970s. Electric piano, synthesizers, electric rhythm guitars, string sections,
+                  brass and trumpets, and syncopated basslines are some of the elements that define its sound.</p>
+               <span class="categories"><i class="fa fa-music"></i>Music Genre</span>
+            </div>
+
+            <div class="link-box">
+               <a href="https://en.wikipedia.org/wiki/Disco" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-04 End -->
+
+         <div id="modal-05" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/genres/modals/m-hip-hop.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Hip-hop</h4>
+               <p>Hip-hop, sometimes referred to as rap, and formerly called disco rap, is a popular music genre that
+                  was developed in the Bronx, a borough of New York City, in the early 1970s by African Americans and
+                  Caribbean immigrants.</p>
+               <span class="categories"><i class="fa fa-music"></i>Music Genre</span>
+            </div>
+
+            <div class="link-box">
+               <a href="https://en.wikipedia.org/wiki/Hip_hop_music" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-05 End -->
+
+         <div id="modal-06" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/genres/modals/m-jazz.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Jazz</h4>
+               <p>Blues and ragtime are the musical genres' roots, and jazz emerged in the African-American
+                  neighborhoods of New Orleans, Louisiana, in the late 19th and early 20th centuries. It has been
+                  acknowledged as a significant medium for musical expression in both traditional and popular music
+                  since the Jazz Age in the 1920s. Swing and blue notes, intricate chords, call-and-response singers,
+                  polyrhythms, and improvisation are characteristics of jazz music. African rhythmic customs and
+                  European harmony are the sources of jazz.</p>
+               <span class="categories"><i class="fa fa-music"></i>Music Genre</span>
+            </div>
+
+            <div class="link-box">
+               <a href="https://en.wikipedia.org/wiki/Jazz" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-06 End -->
+
+         <div id="modal-07" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/genres/modals/m-metal.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Metal</h4>
+               <p>Rock music known as "heavy metal," or simply "metal," originated in the United States and the United
+                  Kingdom throughout the late 1960s and early 1970s. Heavy metal bands originated from blues,
+                  psychedelic, and acid rock and created a massive, thick sound with distorted guitars, long guitar
+                  solos, strong beats, and volume.</p>
+               <span class="categories"><i class="fa fa-music"></i>Music Genre</span>
+            </div>
+
+            <div class="link-box">
+               <a href="https://en.wikipedia.org/wiki/Heavy_metal_music" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-07 End -->
+
+         <div id="modal-08" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/genres/modals/m-pop.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Pop</h4>
+               <p>Pop music is a subgenre of popular music that began to emerge in the United States and the United
+                  Kingdom in the middle of the 1950s. Pop music in the 1950s and 60s included rock & roll as well as the
+                  youth-oriented genres it influenced. Up until the late 1960s, pop and rock music were essentially
+                  indistinguishable. After that, pop started to be associated with more commercial, fleeting, and
+                  approachable music.</p>
+               <span class="categories"><i class="fa fa-music"></i>Music Genre</span>
+            </div>
+
+            <div class="link-box">
+               <a href="https://en.wikipedia.org/wiki/Pop_music" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-08 End -->
+
+         <div id="modal-09" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/genres/modals/m-reggae.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Reggae</h4>
+               <p>Jamaica gave birth to the music genre known as reggae in the late 1960s. The phrase also refers to
+                  Jamaica's contemporary popular music and that of its diaspora. The first well-known song to utilize
+                  the term reggae was "Do the Reggay," a 1968 record by Toots and the Maytals that effectively gave the
+                  genre its name and exposed it to a worldwide audience.</p>
+               <span class="categories"><i class="fa fa-music"></i>Music Genre</span>
+            </div>
+
+            <div class="link-box">
+               <a href="https://en.wikipedia.org/wiki/Reggae" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-09 End -->
+
+         <div id="modal-10" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/genres/modals/m-rock.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Rock</h4>
+               <p>Originating as "rock and roll" in the United States in the late 1940s and early 1950s, rock is a broad
+                  genre of popular music that began to take on various forms in the mid-1960s, especially in the United
+                  States and the United Kingdom.</p>
+               <span class="categories"><i class="fa fa-music"></i>Music Genre</span>
+            </div>
+
+            <div class="link-box">
+               <a href="https://en.wikipedia.org/wiki/Rock_music" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-10 End -->
+
+
+      </div> <!-- row End -->
+
+   </section> <!-- genres Section End-->
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <!-- Simulator Section
+   ================================================== -->
+   <section id="simulator">
+
+      <!-- Drag and Drop Row -->
+      <div class="row">
+         <br><br><br>
+         <div class="container">
+            <div class="file-drop-area">
+               <a><i class="fa fa-music">&nbsp;&nbsp;</i></a>
+               <span class="fake-btn">Choose files</span>
+               <span class="file-msg">or drop files here</span>
+               <input class="file-input" id="audio_file" type="file" accept=".wav">
+               <div class="item-delete"></div>
+            </div>
+            <!-- <div class="four columns"> -->
+               <button id="classifyButton" class="btn btn-primary btn-lg"
+                  style="position:relative; left:10px; height: 70px; width: 120px;">Classify</button>
+            <!-- </div> -->
+         </div>
+      </div> <!-- Drag and Drop Row End -->
+      <!-- Audio Player -->
+      <div class="row">
+         <div class="twelve columns" style="text-align: center; right:50px;">
+            <audio controls id="audioPlayer">
+               <source src="your-music-file.mp3" type="audio/mp3">
+               Your browser does not support the audio element.
+            </audio>
+         </div>
+      </div>
+
+
+      <!-- Color Box -->
+      <div class="row">
+         <div class="twelve columns">
+            <div class="color-box">
+               <div class="color-option" id="blues">Blues</div>
+               <div class="color-option" id="classical">Classical</div>
+               <div class="color-option" id="country">Country</div>
+               <div class="color-option" id="disco">Disco</div>
+               <div class="color-option" id="hiphop">Hiphop</div>
+               <div class="color-option" id="jazz">Jazz</div>
+               <div class="color-option" id="metal">Metal</div>
+               <div class="color-option" id="pop">Pop</div>
+               <div class="color-option" id="reggae">Reggae</div>
+               <div class="color-option" id="rock">Rock</div>
+               <div class="color-option" id="noise">NOISE</div>
+            </div>
+         </div>
+      </div> <!-- Color Box Row End -->
+
+      
+
+
+      <div class="row">
+         <!-- First Column with Card for CNN -->
+         <div class="four column">
+            <div class="w3-panel w3-card-4 white-card">
+               <h1 style="text-align: center; font-weight: bold;">CNN</h1>
+               <h4 id="CNN-genre">The Predicted Genre is </h4>
+               <ul id="CNN-results-list" class="list-unstyled">
+                  <!-- Dynamic list items will be inserted here -->
+               </ul>
+            </div>
+            <p class="text-sm" style="text-align: center; color:black; font-weight: bold;" id="cnn-time"></p>
+
+         </div>
+
+         <!-- Second Column with Button "Classify" -->
+       
+
+         <!-- Third Column with Card for Optimized CNN -->
+         <div class="four columns">
+            <div class="w3-panel w3-card-4 white-card">
+               <h1 style="text-align: center; font-weight: bold;">Ensemble</h1>
+               <h4 id="OCNN-genre">The Predicted Genre is </h4>
+               <ul id="OCNN-results-list" class="list-unstyled">
+                  <!-- Dynamic list items will be inserted here -->
+               </ul>
+            </div>
+            <p  class="text-sm" style="text-align: center; color:black; font-weight: bold;" id="ensemble-time"></p>
+
+         </div>
+      </div> <!-- Row End -->
+
+      <br><br><br>
+
+   </section> <!-- Simulator Section End-->
+
+   <script>
+      $(document).ready(function () {
+         var predictedGenres = {
+            'CNN': null,
+            'OCNN': null
+         };
+   
+         var clickedGenres = []; // Array to keep track of clicked genres
+   
+         // Function to handle click on color options
+         $(".color-option").click(function() {
+            var selectedGenre = $(this).attr('id');
+            var isPredictedGenre = false;
+   
+            // Toggle font color based on prediction status
+            $(this).toggleClass('predicted');
+   
+            // Update font color of all color options
+            $(".color-option").each(function() {
+               var genre = $(this).attr('id');
+               var isGreen = $(this).hasClass('predicted');
+               $("." + genre).css({
+                  "color": isGreen ? "green" : "black",
+                  "font-weight": isGreen ? "bold" : "normal"
+               });
+            });
+            // Update predicted genre for clicked model
+            var model = $(this).parent().parent().attr('id');
+            predictedGenres[model] = $(this).hasClass('predicted') ? selectedGenre : null;
+   
+            // Add or remove clicked genre from the array
+            if ($(this).hasClass('predicted')) {
+               if (!clickedGenres.includes(selectedGenre)) {
+                  clickedGenres.push(selectedGenre);
+               }
+            } else {
+               clickedGenres = clickedGenres.filter(genre => genre !== selectedGenre);
+            }
+         });
+   
+         $('#audio_file').on('change', function(event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+   
+            reader.onload = function(event) {
+               $('#audioPlayer').attr('src', event.target.result);
+            };
+   
+            if (file) {
+               reader.readAsDataURL(file);
+            }
+         });
+   
+         $("#classifyButton").click(function () {
+            var fileInput = $('#audio_file')[0].files[0];
+            if (!fileInput) {
+               console.error('No file selected.');
+               return;
+            }
+   
+            var formData = new FormData();
+            formData.append('file', fileInput);
+   
+            $("#classifyButton").html('<i class="fa fa-spinner fa-spin"></i> Loading...');
+   
+            $.ajax({
+               url: "http://127.0.0.1:8000/classify_music/",
+               type: "POST",
+               data: formData,
+               processData: false,
+               contentType: false,
+               success: function (response) {
+                  console.log('File uploaded successfully');
+                  console.log(response)
+                  $("#classifyButton").html('Classify');
+                  displayClassificationResults(response);
+                  // Handle success response, update classification results
+                  $("#cnn-time").text(response.CNN['Prediction Time'] + " seconds");
+                  $("#ensemble-time").text(response.OCNN['Prediction Time'] + " seconds");
+               },
+               error: function (xhr, status, error) {
+                  console.error('File upload failed');
+                  $("#classifyButton").html('Classify');
+                  // Handle error response
+               }
+            });
+         });
+   
+         function displayClassificationResults(data) {
+            // Display predicted genres for CNN and OCNN
+            $("#CNN-genre").text("The Predicted Genre is " + data.CNN['Predicted Genre (CNN)']);
+            $("#OCNN-genre").text("The Predicted Genre is " + data.OCNN['Predicted Genre (OCNN)']);
+   
+            // Function to generate list items dynamically
+            function generateListItems(predictedPercentages) {
+               var listItems = '';
+               for (var genre in predictedPercentages) {
+                  var color = clickedGenres.includes(genre) ? 'green' : 'black'; // Check if genre was clicked
+                  var fontWeight = color === 'green' ? 'bold' : 'normal'; // Set font weight to bold if color is green
+                  listItems += `<li class="${genre}" style="color: ${color}; font-weight: ${fontWeight};">${genre}: <span>${predictedPercentages[genre].toFixed(2)}%</span></li>`;
+               }
+               return listItems;
+            }
+
+   
+            // Display CNN and OCNN results
+            ['CNN', 'OCNN'].forEach(function (model) {
+               for (var genre in data[model]['Predicted Percentages (' + model + ')']) {
+                  $('#' + model + '-' + genre).html(data[model]['Predicted Percentages (' + model + ')'][genre].toFixed(2) + "%");
+               }
+               $('#' + model + '-results-list').html(generateListItems(data[model]['Predicted Percentages (' + model + ')']));
+            });
+         }
+      });
+   </script>
+   
+   
+
+
+
+
+
+
+   <!-- Contact Section ================================================== -->
+   <section id="contact">
+
+      <h2 style="text-align: center; color: white; font-size: 40px;">MEMBERS</h2>
+
+      <br>
+
+      <!-- First Row - Pictures -->
+      <div class="row">
+
+         <!-- Member 1 -->
+         <div class="four columns">
+
+            <img class="profile-pic" src="images/bonso.jpg" alt="" />
+
+         </div>
+
+         <!-- Member 2 -->
+         <div class="four columns">
+
+            <img class="profile-pic" src="images/mendoza.jpg" alt="" />
+
+         </div>
+
+         <!-- Member 3 -->
+         <div class="four columns">
+
+            <img class="profile-pic" src="images/pena.jpg" alt="" />
+
+         </div>
+
+      </div>
+
+      <!-- Second Row - Contact Details -->
+      <div class="row">
+
+         <!-- Member 1 Contact Details -->
+         <div class="four columns" style="text-align: center;">
+
+            <h2 style="color: whitesmoke;">Contact Details</h2>
+            <p class="address">
+               <span>Evan Q. Bonso</span><br>
+               <span>College of Computing Education
+                  <br>
+                  University of Mindanao
+               </span><br>
+               <span>Matina, Davao City, Philippines
+               </span><br>
+               <span>+63 965 2963 248</span><br>
+               <span>e.bonso.519162@umindanao.edu.ph</span>
+            </p>
+
+         </div>
+
+         <!-- Member 2 Contact Details -->
+         <div class="four columns" style="text-align: center;">
+
+            <h2 style="color: whitesmoke;">Contact Details</h2>
+            <p class="address">
+               <span>Charleslexcel B. Mendoza</span><br>
+               <span>College of Computing Education
+                  <br>
+                  University of Mindanao
+               </span><br>
+               <span>Matina, Davao City, Philippines
+               </span><br>
+               <span>+63 906 2913 082</span><br>
+               <span>c.mendoza.516734@umindanao.edu.ph</span>
+            </p>
+
+         </div>
+
+         <!-- Member 3 Contact Details -->
+         <div class="four columns" style="text-align: center;">
+
+            <h2 style="color: whitesmoke;">Contact Details</h2>
+            <p class="address">
+               <span>George Vincent B. Peña</span><br>
+               <span>College of Computing Education
+                  <br>
+                  University of Mindanao
+               </span><br>
+               <span>Matina, Davao City, Philippines
+               </span><br>
+               <span>+63 976 2031 466</span><br>
+               <span>g.pena.519531@umindanao.edu.ph</span>
+            </p>
+
+         </div>
+
+      </div>
+
+      <hr>
+
+      <h2 style="text-align: center; color: white; font-size: 40px;">ADVISER</h2>
+
+      <br>
+
+      <!-- First Row - Picture -->
+      <div class="row">
+
+         <!-- Adviser 1 -->
+         <div class="twelve columns" style="text-align: center;">
+
+            <img class="profile-pic" src="images/profilepic.jpg" alt="" />
+
+         </div>
+
+      </div>
+
+      <!-- Second Row - Contact Details -->
+      <div class="row">
+
+         <!-- Adviser 1 Contact Details -->
+         <div class="twelve columns" style="text-align: center;">
+
+            <h2 style="color: whitesmoke;">Contact Details</h2>
+            <p class="address">
+               <span>Fe B. Yara, MSIS</span><br>
+               <span>College of Computing Education
+                  <br>
+                  University of Mindanao
+               </span><br>
+               <span>Matina, Davao City, Philippines
+               </span><br>
+               <span>+63 906 3260 253</span><br>
+               <span>fe_yara@umindanao.edu.ph</span>
+            </p>
+
+         </div>
+
+      </div>
+
+
+   </section> <!-- Contact Section End-->
+
+
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+         <div class="twelve columns">
+
+            <ul class="social-links">
+               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+               <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+               <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            </ul>
+
+            <ul class="copyright">
+               <li>&copy; Copyright 2024</li>
+               <li>Music Genre Classification Using Ensemble Learning</li>
+            </ul>
+
+         </div>
+
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a>
+         </div>
+
+      </div>
+
+   </footer> <!-- Footer End-->
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/magnific-popup.js"></script>
+   <script src="js/init.js"></script>
+
+   <!-- Java Script File Upload
+   ================================================== -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <script src="script.js"></script>
+
+   <script>
+      const $fileInput = $('.file-input');
+      const $droparea = $('.file-drop-area');
+      const $delete = $('.item-delete');
+
+      $fileInput.on('dragenter focus click', function () {
+         $droparea.addClass('is-active');
+      });
+
+      $fileInput.on('dragleave blur drop', function () {
+         $droparea.removeClass('is-active');
+      });
+
+      $fileInput.on('change', function () {
+         let filesCount = $(this)[0].files.length;
+         let $textContainer = $(this).prev();
+
+         if (filesCount === 1) {
+            let fileName = $(this).val().split('\\').pop();
+            $textContainer.text(fileName);
+            $('.item-delete').css('display', 'inline-block');
+         } else if (filesCount === 0) {
+            $textContainer.text('or drop files here');
+            $('.item-delete').css('display', 'none');
+         } else {
+            $textContainer.text(filesCount + ' files selected');
+            $('.item-delete').css('display', 'inline-block');
+         }
+      });
+
+      $delete.on('click', function () {
+         $('.file-input').val(null);
+         $('.file-msg').text('or drop files here');
+         $('.item-delete').css('display', 'none');
+      });
+   </script>
+
+<script>
+   const colorOptions = {
+      blues: { background: 'blue', font: 'white' },
+      classical: { background: 'orange', font: 'black' },
+      country: { background: 'brown', font: 'white' },
+      disco: { background: 'aqua', font: 'black' },
+      hiphop: { background: 'red', font: 'white' },
+      jazz: { background: 'violet', font: 'white' },
+      metal: { background: 'black', font: 'white' },
+      pop: { background: 'yellow', font: 'black' },
+      reggae: { background: 'green', font: 'white' },
+      rock: { background: 'purple', font: 'white' },
+      noise: { background: 'grey', font: 'white' }
+   };
+
+   $('.color-option').click(function() {
+      const option = colorOptions[this.id];
+      const currentColor = $(this).css('background-color');
+      const isDefaultColor = currentColor === 'rgb(255, 255, 255)' || currentColor === 'transparent';
+
+      if (isDefaultColor) {
+         $(this).css('background-color', option.background);
+         $(this).css('color', option.font);
+      } else {
+         $(this).css('background-color', 'white');
+         $(this).css('color', 'black');
+      }
+   });
+
+</script>
+
+
+
+
+
+
+
+</body>
+
+</html>
